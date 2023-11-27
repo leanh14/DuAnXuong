@@ -74,12 +74,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-<<<<<<< HEAD
-=======
                     <image>
                         <builder>paketobuildpacks/builder-jammy-base:latest</builder>
-                    </image>
->>>>>>> 2ed7b90 (qst commit)
+                    </image>x
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
