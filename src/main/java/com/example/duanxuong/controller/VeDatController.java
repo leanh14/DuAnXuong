@@ -1,11 +1,10 @@
-package com.example.duanxuong.controller;
+package com.example.duanxuong.Controller;
 
-import com.example.duanxuong.model.VeDat;
-import com.example.duanxuong.repository.VeDatRepository;
+import com.example.duanxuong.Model.VeDat;
+import com.example.duanxuong.Repository.VeDatRepository;
+import com.example.duanxuong.Service.VeXemPhimService;
 import com.example.duanxuong.service.NhanVienService;
 import com.example.duanxuong.service.VeDatService;
-import com.example.duanxuong.service.VeXemPhimService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

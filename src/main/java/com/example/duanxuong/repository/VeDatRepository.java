@@ -1,6 +1,6 @@
-package com.example.duanxuong.repository;
+package com.example.duanxuong.Repository;
 
-import com.example.duanxuong.model.VeDat;
+import com.example.duanxuong.Model.VeDat;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

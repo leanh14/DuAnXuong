@@ -1,13 +1,12 @@
-package com.example.duanxuong.controller;
+package com.example.duanxuong.Controller;
 
-import com.example.duanxuong.model.Voucher;
-import com.example.duanxuong.repository.VoucherRepository;
-import com.example.duanxuong.service.VeXemPhimService;
-import com.example.duanxuong.service.VoucherService;
+import com.example.duanxuong.Model.Voucher;
+import com.example.duanxuong.Repository.VoucherRepository;
+import com.example.duanxuong.Service.VeXemPhimService;
+import com.example.duanxuong.Service.VoucherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;

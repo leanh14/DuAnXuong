@@ -17,9 +17,8 @@
     <title>Chuc Vu</title>
 </head>
 <body class="container">
-  <h2>Helo ban</h2>
   <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Thêm chucVu
+      Thêm Chức Vụ
   </button>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -51,7 +50,7 @@
       </div>
   </div>
 
-  <h1 style="text-align: center">Danh sach chucvu</h1>
+  <h1 style="text-align: center">Danh sách chức vụ</h1>
   <table class="table">
       <thead>
       <tr>

@@ -1,6 +1,6 @@
 package com.example.duanxuong.service;
 
-import com.example.duanxuong.model.VeDat;
+import com.example.duanxuong.Model.VeDat;
 
 import java.util.List;
 import java.util.UUID;

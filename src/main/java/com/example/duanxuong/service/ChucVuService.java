@@ -1,6 +1,6 @@
-package com.example.duanxuong.service;
+package com.example.duanxuong.Service;
 
-import com.example.duanxuong.model.ChucVu;
+import com.example.duanxuong.Model.ChucVu;
 
 import java.util.List;
 import java.util.UUID;

@@ -1,6 +1,6 @@
-package com.example.duanxuong.service;
+package com.example.duanxuong.Service;
 
-import com.example.duanxuong.model.VeXemPhim;
+import com.example.duanxuong.Model.VeXemPhim;
 
 import java.util.List;
 

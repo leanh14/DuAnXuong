@@ -1,6 +1,6 @@
 package com.example.duanxuong.service;
 
-import com.example.duanxuong.model.NhanVien;
+import com.example.duanxuong.Model.NhanVien;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

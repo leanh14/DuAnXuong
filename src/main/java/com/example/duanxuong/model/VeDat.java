@@ -1,4 +1,4 @@
-package com.example.duanxuong.model;
+package com.example.duanxuong.Model;
 
 import jakarta.persistence.*;
 import lombok.*;

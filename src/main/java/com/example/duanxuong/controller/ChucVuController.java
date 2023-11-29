@@ -1,8 +1,7 @@
-package com.example.duanxuong.controller;
-
-import com.example.duanxuong.model.ChucVu;
-import com.example.duanxuong.repository.ChucVuRepository;
-import com.example.duanxuong.service.ChucVuService;
+package com.example.duanxuong.Controller;
+import com.example.duanxuong.Model.ChucVu;
+import com.example.duanxuong.Repository.ChucVuRepository;
+import com.example.duanxuong.Service.ChucVuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -56,7 +55,6 @@ public class ChucVuController {
                          @ModelAttribute("chucVu")ChucVu chucVu){
         chucVuService.update(UUID.fromString(id),chucVu);
         return "redirect:/chuc-vu/hien-thi";
-
     }
 }
 

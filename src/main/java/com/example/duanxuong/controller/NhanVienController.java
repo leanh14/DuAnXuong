@@ -1,8 +1,8 @@
-package com.example.duanxuong.controller;
+package com.example.duanxuong.Controller;
 
-import com.example.duanxuong.model.NhanVien;
-import com.example.duanxuong.repository.NhanVienRepository;
-import com.example.duanxuong.service.ChucVuService;
+import com.example.duanxuong.Model.NhanVien;
+import com.example.duanxuong.Repository.NhanVienRepository;
+import com.example.duanxuong.Service.ChucVuService;
 import com.example.duanxuong.service.NhanVienService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @Controller

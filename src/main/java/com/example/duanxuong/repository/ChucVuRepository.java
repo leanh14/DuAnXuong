@@ -1,7 +1,6 @@
-package com.example.duanxuong.repository;
+package com.example.duanxuong.Repository;
 
-import com.example.duanxuong.model.ChucVu;
-import jdk.jfr.Registered;
+import com.example.duanxuong.Model.ChucVu;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

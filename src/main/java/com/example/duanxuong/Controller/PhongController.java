@@ -2,7 +2,6 @@ package com.example.duanxuong.Controller;
 
 import com.example.duanxuong.Model.Phong;
 import com.example.duanxuong.Repository.PhongRepository;
-import com.example.duanxuong.Repository.TangRepository;
 import com.example.duanxuong.Service.PhongService;
 import com.example.duanxuong.Service.TangService;
 import org.springframework.beans.factory.annotation.Autowired;
