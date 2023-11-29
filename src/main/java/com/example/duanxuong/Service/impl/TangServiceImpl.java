@@ -1,8 +1,8 @@
-package com.example.duanxuong.Service.impl;
+package com.example.duanxuong.service.impl;
 
-import com.example.duanxuong.Model.Tang;
-import com.example.duanxuong.Repository.TangRepository;
-import com.example.duanxuong.Service.TangService;
+import com.example.duanxuong.model.Tang;
+import com.example.duanxuong.service.TangService;
+import com.example.duanxuong.repository.TangRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,4 +33,9 @@ public class TangServiceImpl implements TangService {
         Tang tang1 = tangRepository.save(tang);
         return tang1;
     }
-  }
+
+    @Override
+    public void delete(UUID id) {
+        tangRepository.deleteById(id);
+    }
+}

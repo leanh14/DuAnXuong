@@ -1,10 +1,9 @@
-package com.example.duanxuong.Controller;
+package com.example.duanxuong.controller;
 
-import com.example.duanxuong.Model.Phong;
-import com.example.duanxuong.Repository.PhongRepository;
-import com.example.duanxuong.Repository.TangRepository;
-import com.example.duanxuong.Service.PhongService;
-import com.example.duanxuong.Service.TangService;
+import com.example.duanxuong.model.Phong;
+import com.example.duanxuong.repository.PhongRepository;
+import com.example.duanxuong.service.PhongService;
+import com.example.duanxuong.service.TangService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -31,28 +30,28 @@ public class PhongController {
         Pageable pageable = PageRequest.of(num,size);
         model.addAttribute("listp", phongRepository.findAll(pageable).getContent());
         model.addAttribute("totalPage", phongRepository.findAll(pageable).getTotalElements());
-        model.addAttribute("listTang", tangService.getAll());
         model.addAttribute("phong", new Phong());
-        return "indexPhong";
+        model.addAttribute("listTang", tangService.getAll());
+        return "phong/indexPhong";
     }
 
-    @RequestMapping(value="/add", method=RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
+    @PostMapping("/add")
     public String add(@ModelAttribute("phong") Phong phong){
         phongService.add(phong);
-        return "{ status: \"success\" }";
+        return "redirect:/phong/hien-thi";
     }
 
     @PostMapping("/update/{id}")
     public String update(@ModelAttribute("phong") Phong phong, @PathVariable("id") String id){
-        phongService.update(UUID.fromString(id),phong);
+        phongService.update(phong, UUID.fromString(id));
         return "redirect:/phong/hien-thi";
     }
 
     @GetMapping("/detail/{id}")
     public String detail(@PathVariable("id")String id, Model model){
         model.addAttribute("phong", phongService.detail(UUID.fromString(id)));
-        return "detailPhong";
+        model.addAttribute("listTang", tangService.getAll());
+        return "phong/detailPhong";
     }
 
 

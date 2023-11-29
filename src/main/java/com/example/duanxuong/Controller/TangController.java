@@ -1,8 +1,8 @@
-package com.example.duanxuong.Controller;
+package com.example.duanxuong.controller;
 
-import com.example.duanxuong.Model.Tang;
-import com.example.duanxuong.Repository.TangRepository;
-import com.example.duanxuong.Service.TangService;
+import com.example.duanxuong.model.Tang;
+import com.example.duanxuong.service.TangService;
+import com.example.duanxuong.repository.TangRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -28,7 +28,7 @@ public class TangController {
         model.addAttribute("list", tangRepository.findAll(pageable).getContent());
         model.addAttribute("totalPage", tangRepository.findAll(pageable).getTotalElements());
         model.addAttribute("tang", new Tang());
-        return "index";
+        return "tang/index";
     }
 
     @PostMapping("/add")
@@ -40,13 +40,19 @@ public class TangController {
     @GetMapping("/detail/{id}")
     public String detail(@PathVariable("id") String id, Model model){
         model.addAttribute("tang", tangService.detail(UUID.fromString(id)));
-        return "detail";
+        return "tang/detail";
     }
 
     @PostMapping("/update/{id}")
     public String update(@ModelAttribute("tang") Tang tang,
                          @PathVariable("id") String id){
         tangService.update(tang, UUID.fromString(id));
+        return "redirect:/tang/hien-thi";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id")String id){
+        tangService.delete(UUID.fromString(id));
         return "redirect:/tang/hien-thi";
     }
 

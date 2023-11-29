@@ -1,8 +1,8 @@
-package com.example.duanxuong.Service.impl;
+package com.example.duanxuong.service.impl;
 
-import com.example.duanxuong.Model.Phong;
-import com.example.duanxuong.Repository.PhongRepository;
-import com.example.duanxuong.Service.PhongService;
+import com.example.duanxuong.model.Phong;
+import com.example.duanxuong.repository.PhongRepository;
+import com.example.duanxuong.service.PhongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,27 +11,27 @@ import java.util.UUID;
 
 @Service
 public class PhongServiceImpl implements PhongService {
-    @Autowired
+@Autowired
     private PhongRepository phongRepository;
     @Override
     public List<Phong> getAll() {
         return phongRepository.findAll();
     }
-
     @Override
     public void add(Phong phong) {
         phongRepository.save(phong);
     }
 
-    @Override
+
     public Phong detail(UUID id) {
         Phong phong = phongRepository.findById(id).get();
         return phong;
     }
 
     @Override
-    public Phong update(UUID id, Phong phong) {
-        Phong phong1 = phongRepository.save(phong);
-        return phong1;
+    public Phong update(Phong phong, UUID id) {
+        Phong Phong1 = phongRepository.save(phong);
+        return Phong1;
     }
+
 }

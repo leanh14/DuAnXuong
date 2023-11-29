@@ -1,4 +1,4 @@
-package com.example.duanxuong.Model;
+package com.example.duanxuong.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,7 +22,7 @@ public class Phong {
     @Column(name = "ma")
     private String ma;
     @Column(name = "ten")
-    private String ten;
+    private String tenPhong;
     @Column(name = "loaiPhong")
     private String loaiPhong;
     @Column(name = "soChoNgoi")

@@ -1,6 +1,7 @@
-package com.example.duanxuong.Repository;
+package com.example.duanxuong.repository;
 
-import com.example.duanxuong.Model.Phong;
+
+import com.example.duanxuong.model.Phong;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

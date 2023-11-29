@@ -1,4 +1,4 @@
-package com.example.duanxuong.Model;
+package com.example.duanxuong.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,7 +17,7 @@ public class Tang {
     @Column(name = "id")
     private UUID id;
     @Column(name = "ma")
-    private String ma;
+    private String maTang;
     @Column(name = "tenTang")
     private String tenTang;
     @Column(name = "soPhong")

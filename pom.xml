@@ -66,6 +66,7 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>9.4.1.jre16</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -73,17 +74,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <image>
-                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>
-                    </image>x
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
+<!--                <configuration>-->
+<!--                    <image>-->
+<!--                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>-->
+<!--                    </image>x-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>
